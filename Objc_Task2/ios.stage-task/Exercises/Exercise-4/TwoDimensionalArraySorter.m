@@ -36,8 +36,9 @@
  
     // if not empty then append into multidim array
     if  ((sortedNumbers.count != 0) && (sortedStrings.count != 0)) {
+        NSArray* reversedArray = [[sortedStrings reverseObjectEnumerator] allObjects];
         [finalArray addObject:sortedNumbers];
-        [finalArray addObject:sortedStrings];
+        [finalArray addObject:reversedArray];
     }
     if  ((sortedNumbers.count != 0) && (sortedStrings.count == 0)) {
         finalArray = [[NSMutableArray alloc] initWithArray:sortedNumbers];
