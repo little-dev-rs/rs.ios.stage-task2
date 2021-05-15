@@ -12,16 +12,11 @@
         float floatValue2n = [num2n floatValue];
         int int2n = (int) floatValue2n;
         
-        for (int k = 0; k < [array count]; k++) {
+        for (int k = n+1; k < [array count]; k++) {
             id arr1k = [array objectAtIndex: k];
             NSNumber *num1k = (NSNumber*)arr1k;
             float floatValue1k = [num1k floatValue];
             int int1k = (int) floatValue1k;
-            
-            if (k == n ){
-                continue;
-            }
-            
             int compare1 = int2n - int1k;
             int compareModule = abs(compare1);
             if (compareModule == num) {
@@ -29,7 +24,7 @@
             }
         }
     }
-    return count/2;
+    return count;
 }
 
 @end
