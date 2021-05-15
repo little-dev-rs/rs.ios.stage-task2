@@ -18,13 +18,18 @@
             float floatValue1k = [num1k floatValue];
             int int1k = (int) floatValue1k;
             
+            if (k == n ){
+                continue;
+            }
+            
             int compare1 = int2n - int1k;
-            if (compare1 == num) {
+            int compareModule = abs(compare1);
+            if (compareModule == num) {
                 count++;
             }
         }
     }
-    return count;
+    return count/2;
 }
 
 @end

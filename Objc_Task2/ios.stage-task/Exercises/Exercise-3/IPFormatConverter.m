@@ -18,8 +18,10 @@
     NSMutableArray *myArray = [NSMutableArray arrayWithArray:numbersArray];
     if (myArray.count < 4) {
         for (int n = 1; n < 4; n++) {
-            [myArray addObject:@(0)];
-            NSLog(@"myArray %@", myArray);
+            if (myArray.count < 4) {
+                [myArray addObject:@(0)];
+                NSLog(@"myArray %@", myArray);
+            }
         }
         NSString *joinedComponents = [myArray componentsJoinedByString:@"."];
         return joinedComponents;
